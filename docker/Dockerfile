@@ -111,7 +111,6 @@ COPY docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
 COPY ./nginx/conf.d /etc/nginx/conf.d
 COPY ./nginx/nginx.conf /etc/nginx/
-COPY ./nginx/proxy_params /etc/nginx/
 COPY ./nginx/sites-enabled /etc/nginx/sites-enabled
 COPY ./nginx/sites-available /etc/nginx/sites-available
 COPY 10-listen-on-ipv6-by-default.sh /docker-entrypoint.d
