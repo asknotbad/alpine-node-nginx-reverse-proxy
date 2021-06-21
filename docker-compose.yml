@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  reverseproxy:
+    container_name: nginxreverseproxy
+    restart: always
+    build:
+      context: ./docker
+    volumes:
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d
+      - ./docker/nginx/sites-available:/etc/nginx/sites-available
+      - ./docker/nginx/sites-enabled:/etc/nginx/sites-enabled
+      - ./docker/log:/var/log/nginx
+    ports:
+      - 80:80
+      - 443:443
