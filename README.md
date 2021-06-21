@@ -17,7 +17,7 @@ Docker Alpine container with nginx reverse-proxy
         - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
         # if you need to replace default conf.d folder contents
         - ./docker/nginx/conf.d:/etc/nginx/conf.d
-        - ./docker/nginx/sites-available:/etc/nginx/sites-available
+        - ./docker/nginx/sites- available:/etc/nginx/sites-available
         # your sites configs
         - ./docker/nginx/sites-enabled:/etc/nginx/sites-enabled
         # log files
